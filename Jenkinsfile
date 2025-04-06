@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'remote-agent' }
+  agent { label 'remote_agent' }
     stages {
       stage('checkout') {
         steps {
