@@ -1,18 +1,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "my-java-app.fullname" . }}
+  name: {{ include "time-tracker.fullname" . }}
   labels:
-    app: {{ include "my-java-app.name" . }}
+    app: {{ include "time-tracker.name" . }}
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app: {{ include "my-java-app.name" . }}
+      app: {{ include "time-tracker.name" . }}
   template:
     metadata:
       labels:
-        app: {{ include "my-java-app.name" . }}
+        app: {{ include "time-tracker.name" . }}
     spec:
       containers:
         - name: {{ .Chart.Name }}
